@@ -114,6 +114,30 @@
          <framework src="MobileCoreServices.framework" />
          <framework src="CoreGraphics.framework" />
          <framework src="AVFoundation.framework" />
+       
+         <preference name="CAMERA_USAGE_DESCRIPTION_IOS" default="This app needs access to the camera to take pictures." />
+         <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+           <string>$CAMERA_USAGE_DESCRIPTION_IOS</string>
+         </config-file>
+       
+         <preference name="PHOTOLIBRARY_USAGE_DESCRIPTION_IOS" default="This app needs access to the photo library to get pictures." />
+         <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+             <string>$PHOTOLIBRARY_USAGE_DESCRIPTION_IOS</string>
+         </config-file>
+         <config-file target="*-Info.plist" parent="NSPhotoLibraryAddUsageDescription">
+             <string>$PHOTOLIBRARY_USAGE_DESCRIPTION_IOS</string>
+         </config-file>
+
+         <preference name="GEOLOCATION_USAGE_DESCRIPTION_IOS" default="This app needs access to your location." />
+         <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+             <string>$GEOLOCATION_USAGE_DESCRIPTION_IOS</string>
+         </config-file>
+         <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
+             <string>$GEOLOCATION_USAGE_DESCRIPTION_IOS</string>
+         </config-file>
+         <config-file target="*-Info.plist" parent="NSLocationAlwaysAndWhenInUseUsageDescription">
+             <string>$GEOLOCATION_USAGE_DESCRIPTION_IOS</string>
+         </config-file>
 
      </platform>
 
